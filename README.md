@@ -24,7 +24,7 @@ A. Y. N J and A. V R, "FPGA Implementation of a High Speed Efficient Single Prec
 ## Block Diagram of the FP Multiplier 
 
  <p align="center">
-  <img width="500" height="500" src="/SCHEMATIC AND WAVEFORMS/BLOCK.png">
+  <img width="500" height="500" src="/Images/BLOCK.png">
 </p>
 
 ## AMD Xilinx Vivado implementations
@@ -34,14 +34,14 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Schematic of the FP Multiplier
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/SCHEMATIC.png">
+  <img width="500" height="500" src="/Images/BLOCK.png">
 </p>
 
 
 ## Simulation of the FP Multiplier
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/SIMULATION.png">
+  <img width="500" height="500" src="/Images/BLOCK.png">
 </p>
 
 - The 0 - 10 ns for normal multiplication operation
@@ -52,7 +52,7 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Power Summary of the FP Multiplier
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/POWER SUMMARY.png">
+  <img width="500" height="500" src="/Images/BLOCK.png">
 </p>
 
 The logic which is the multiplier module consume a power of 0.555 watts 
@@ -102,7 +102,7 @@ The design was imported to Openlane on linux and a configuration script was deve
 ## Power Report
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/POWER REPORT.png">
+  <img width="500" height="500" src="/Images/BLOCK.png">
 </p>
 
 
