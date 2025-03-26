@@ -54,19 +54,24 @@ A. Y. N J and A. V R, "FPGA Implementation of a High Speed Efficient Single Prec
 The RTL level design of the multiplier was developed in AMD Xilinx Vivado and functional verification and fpga synthesis was also performed.
 
 
-## Schematic of the FP Multiplier
+### Schematic of the FP Multiplier
 
  <p align="center">
   <img width="800" height="500" src="/Images/Screenshot 2025-03-20 235011.png">
 </p>
 
 
-## Zero delay Simulation of the FP Multiplier
+### Zero delay Simulation of the FP Multiplier
 
  <p align="center">
   <img width="800" height="500" src="/Images/Screenshot 2025-03-20 235125.png">
 </p>
 
+## Script for Automating Synthesis in Genus
+
+ <p align="center">
+  <img width="800" height="500" src="/Images/SCRIPT.png">
+</p>
 
 ## Synthesized Netlist in Genus
 
@@ -74,26 +79,26 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
   <img width="800" height="500" src="/Images/NETLIST.png">
 </p>
 
-## Gates Level Simulation (GLS)
+### Gates Level Simulation (GLS)
 
  <p align="center">
   <img width="800" height="500" src="/Images/FP MULT GLS.png">
 </p>
 
 
-## AREA
+### AREA
 
  <p align="center">
   <img width="800" height="500" src="/Images/AREA.png">
 </p>
 
-## POWER
+### POWER
 
 <p align="center">
   <img width="800" height="500" src="/Images/POWER.png">
 </p>
 
-## TIMING
+### TIMING
 
 <p align="center">
   <img width="800" height="500" src="/Images/Screenshot 2025-03-26 193053.png">
@@ -103,7 +108,7 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Innovus Implementation
 The design was imported to Openlane on linux and a configuration script was developed which performed the synthesis to gds steps. Openlane is an open-source EDA tools that is used to perfrom the ASIC flow. The design was implemented by leveraging Skywater 130nm pdk.
 
-## Final Routed Design
+### Final Routed Design
 
  <p align="center">
   <img width="800" height="500" src="/Images/PD.png">
