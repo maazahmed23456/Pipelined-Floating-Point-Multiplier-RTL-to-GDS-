@@ -61,12 +61,11 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 </p>
 
 
-## Simulation of the FP Multiplier
+## Zero delay Simulation of the FP Multiplier
 
  <p align="center">
   <img width="800" height="500" src="/Images/Screenshot 2025-03-20 235125.png">
 </p>
-
 
 
 ## Synthesized Netlist in Genus
@@ -75,7 +74,12 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
   <img width="800" height="500" src="/Images/NETLIST.png">
 </p>
 
-The logic which is the multiplier module consume a power of 0.555 watts 
+## Gates Level Simulation (GLS)
+
+ <p align="center">
+  <img width="800" height="500" src="/Images/FP MULT GLS.png">
+</p>
+
 
 ## AREA
 
