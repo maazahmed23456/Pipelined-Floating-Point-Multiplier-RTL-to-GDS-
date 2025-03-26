@@ -34,14 +34,14 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Schematic of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235011.png.png">
+  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235011.png">
 </p>
 
 
 ## Simulation of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235125.png.png">
+  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235125.png">
 </p>
 
 - The 0 - 10 ns for normal multiplication operation
@@ -52,15 +52,27 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Synthesized Netlist in Genus
 
  <p align="center">
-  <img width="500" height="500" src="/Images/BLOCK.png">
+  <img width="500" height="500" src="/Images/NETLIST.png">
 </p>
 
 The logic which is the multiplier module consume a power of 0.555 watts 
 
-## Resource Utilization of the FP Multiplier
+## AREA
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/RESOURCE UTILIZATION.png">
+  <img width="500" height="500" src="/Images/AREA.png">
+</p>
+
+## POWER
+
+<p align="center">
+  <img width="500" height="500" src="/Images/POWER.png">
+</p>
+
+## TIMING
+
+<p align="center">
+  <img width="500" height="500" src="/Images/NETLIST.png">
 </p>
 
 It shows the FP Multiplier was synthesiszed by ustilisation of only 59 LUT and 2 DSP and 99 I/O ports which is fair utilization.
