@@ -34,14 +34,14 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Schematic of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/BLOCK.png">
+  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235011.png.png">
 </p>
 
 
 ## Simulation of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/BLOCK.png">
+  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235125.png.png">
 </p>
 
 - The 0 - 10 ns for normal multiplication operation
@@ -49,7 +49,7 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 - The 50 - 60 ns for multiplication with negative number
 
 
-## Power Summary of the FP Multiplier
+## Synthesized Netlist in Genus
 
  <p align="center">
   <img width="500" height="500" src="/Images/BLOCK.png">
