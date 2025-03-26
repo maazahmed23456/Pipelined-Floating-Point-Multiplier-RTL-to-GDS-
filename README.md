@@ -1,18 +1,41 @@
 # Pipelined-Floating-Point-Multiplier-RTL-to-GDS-
 Designed a Pipelined Floating Point Multiplier that works with IEEE 754 Single Precision FP numbers at RTL level , performed synthesis and verified functionality by Gate Level Simulation (GLS) then performed the backedn physical design from Floorplan to Signoff using Innovus.
 
-# RTL to GDSII ASIC Flow of Floating Point Multiplier
-Complete RLT to GDSII flow of a multiplier architecture that operates upon IEEE 754 single precision floating point numbers
-
 ## A Glance at the FP Multiplier Architecture
 
-A Floating-Point (FP) Multiplier is a crucial component in digital systems requiring high-performance arithmetic operations, such as digital signal processing, machine learning, and graphics processing. In VLSI design, an FP multiplier is implemented to perform multiplication of two floating-point numbers, adhering to the IEEE 754 standard. The architecture typically involves three stages: exponent addition, mantissa multiplication, and normalization. Exponent addition handles the biased exponents, while mantissa multiplication uses high-speed techniques like Wallace tree or Booth encoding to optimize the hardware and reduce critical path delay. The normalization stage ensures the result conforms to the IEEE standard by aligning the decimal point. Designing an efficient FP multiplier in VLSI requires optimizing trade-offs between power, performance, and area (PPA), making it a challenging task. Advanced techniques, such as pipelining, clock gating, and approximate computing, are often employed to enhance throughput and energy efficiency in modern ASIC or FPGA implementations.
+Pipelined Floating-Point Multiplier (FP Multiplier) Architecture
 
-- Sign Logic
-- Exponent Adder
-- Mantissa Multiplier
-- Normalization
-- Exceptions handler
+A pipelined floating-point (FP) multiplier is a high-performance arithmetic unit designed for efficient multiplication of floating-point numbers, adhering to the IEEE 754 standard. The pipelining technique enhances throughput by breaking the multiplication process into sequential stages, enabling concurrent execution of multiple operations. This architecture is widely utilized in digital signal processing (DSP), machine learning, graphics processing, and high-performance computing applications.
+
+Pipeline Stages
+
+The pipelined FP multiplier consists of the following key stages:
+
+- 1. Sign Logic
+
+
+- 2. Exponent Addition
+
+
+- 3. Mantissa Multiplication
+
+
+- 4. Normalization & Rounding
+
+
+- 5. Exception Handling
+ 
+- **Applications**
+
+- Digital Signal Processing (DSP): Real-time audio and video processing.
+
+- Machine Learning & AI Accelerators: High-speed tensor computations in deep learning frameworks.
+
+- Graphics Processing: Floating-point arithmetic in GPU shaders and image rendering.
+
+- Scientific Computing: High-precision numerical simulations and matrix operations. 
+
+
 
 ## Base Paper
 
@@ -34,25 +57,22 @@ The RTL level design of the multiplier was developed in AMD Xilinx Vivado and fu
 ## Schematic of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235011.png">
+  <img width="800" height="500" src="/Images/Screenshot 2025-03-20 235011.png">
 </p>
 
 
 ## Simulation of the FP Multiplier
 
  <p align="center">
-  <img width="500" height="500" src="/Images/Screenshot 2025-03-20 235125.png">
+  <img width="800" height="500" src="/Images/Screenshot 2025-03-20 235125.png">
 </p>
 
-- The 0 - 10 ns for normal multiplication operation
-- The 10 - 50 ns for showing various exception modelled
-- The 50 - 60 ns for multiplication with negative number
 
 
 ## Synthesized Netlist in Genus
 
  <p align="center">
-  <img width="500" height="500" src="/Images/NETLIST.png">
+  <img width="800" height="500" src="/Images/NETLIST.png">
 </p>
 
 The logic which is the multiplier module consume a power of 0.555 watts 
@@ -60,64 +80,46 @@ The logic which is the multiplier module consume a power of 0.555 watts
 ## AREA
 
  <p align="center">
-  <img width="500" height="500" src="/Images/AREA.png">
+  <img width="800" height="500" src="/Images/AREA.png">
 </p>
 
 ## POWER
 
 <p align="center">
-  <img width="500" height="500" src="/Images/POWER.png">
+  <img width="800" height="500" src="/Images/POWER.png">
 </p>
 
 ## TIMING
 
 <p align="center">
-  <img width="500" height="500" src="/Images/NETLIST.png">
+  <img width="800" height="500" src="/Images/Screenshot 2025-03-26 193053.png">
 </p>
 
-It shows the FP Multiplier was synthesiszed by ustilisation of only 59 LUT and 2 DSP and 99 I/O ports which is fair utilization.
 
-## Openlane Implementaions
+## Innovus Implementation
 The design was imported to Openlane on linux and a configuration script was developed which performed the synthesis to gds steps. Openlane is an open-source EDA tools that is used to perfrom the ASIC flow. The design was implemented by leveraging Skywater 130nm pdk.
 
-## GDS
+## Final Routed Design
 
  <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/GDS.png">
+  <img width="800" height="500" src="/Images/PD.png">
 </p>
 
-## Routed Design
+## Summary
 
- <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/ROUTING.png">
-</p>
+- Designed a 32-bit floating-point multiplier with 5-stage pipelining in Verilog, achieving a 3.78 ns critical path.
 
-## Heatmap
+- Power & Area: Achieved 1.6 mW power and occupied 13207 μm² area, utilizing 1332 standard cells after synthesis in Cadence Genus.
 
- <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/ROUTING HEATMAP.png">
-</p>
+- Physical Design: Completed floorplanning, placement, clock tree synthesis (CTS), and routing in Cadence Innovus (90nm technology).
 
-## Area Report
+- Final Design Metrics:
 
- <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/AREA REPORT.png">
-</p>
+Chip Area: 137 × 137 μm²
 
-## Utilization
+Throughput: 8.47 Gbps
 
- <p align="center">
-  <img width="800" height="500" src="/SCHEMATIC AND WAVEFORMS/UTILIZATION.png">
-</p>
-
-
-## Power Report
-
- <p align="center">
-  <img width="500" height="500" src="/Images/BLOCK.png">
-</p>
-
-
+Performance: 0.265 GFLOPs
 
 
 ***************
